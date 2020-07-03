@@ -21,9 +21,22 @@ public class MediaSemestral {
 		
 		float nota = (prova * 3 + projeto * 3 + lista * 2 + cont * 3)/11; // media das notas
 		
-		boolean resultado = nota > 8;
+		float falta = 8 - nota; // quanto falta de nota
 		
-		float falta = 10 - nota;
+		boolean resultado = nota >= 8; // verifica se aluno passou.
+		
+		if (resultado)
+		{
+			System.out.println("A nota final é "+nota+". O aluno foi aprovado.");
+
+		}
+		else
+		{
+			System.out.println("A nota final é "+nota+". O aluno foi reprovado. Faltam "+falta+ " pontos.");
+
+		}
+			
+		
 		
 		System.out.println("A nota final é "+nota+". O aluno foi aprovado? "+resultado+". Faltam "+falta+ " pontos.");
 		

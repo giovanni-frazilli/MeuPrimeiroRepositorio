@@ -6,9 +6,12 @@ public class MediaSemestral {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in); // habilita entrada de dados
+		float prova;
 		
-		System.out.println("Digite a nota da prova");
-		float prova = sc.nextFloat();
+		do{
+			System.out.println("Digite a nota da prova");
+			prova = sc.nextFloat();
+		}while (prova < 0 || prova > 10);
 		
 		System.out.println("Digite a nota do projeto");
 		float projeto = sc.nextFloat();
@@ -20,6 +23,7 @@ public class MediaSemestral {
 		float cont = sc.nextFloat();
 		
 		float nota = (prova * 3 + projeto * 3 + lista * 2 + cont * 3)/11; // media das notas
+		
 		
 		float falta = 8 - nota; // quanto falta de nota
 		
@@ -36,10 +40,7 @@ public class MediaSemestral {
 
 		}
 			
-		
-		
-		System.out.println("A nota final é "+nota+". O aluno foi aprovado? "+resultado+". Faltam "+falta+ " pontos.");
-		
+				
 		sc.close();
 	}
 
